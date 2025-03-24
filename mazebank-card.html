@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MazeBank Card</title>
+        <style>
+            body {
+                background-color: rgb(51, 1, 1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                color: white;
+            }
+
+            .titlu {
+                color: white;
+                font-weight: bold;
+                text-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                background-color: rgba(0, 0, 0, 0.8);
+                border-radius: 15px;
+                width: 350px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            }
+
+            .logo-mazebank {
+                width: 90px;
+                border: none;
+                background: transparent;
+                border-radius: 50%;
+                box-shadow: 0 10px 20px rgba(255, 0, 0, 0.7);
+                transition: all 0.3s ease-in-out;
+                margin-bottom: 20px;
+            }
+
+            .logo-mazebank:hover {
+                transform: scale(1.1);
+                box-shadow: 0 20px 40px rgba(255, 0, 0, 1);
+            }
+
+            .rechizite {
+                width: 100%;
+                padding: 12px;
+                border-radius: 10px;
+                border: 2px solid #fff;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                font-size: 16px;
+                margin-bottom: 15px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .rechizite:focus {
+                outline: none;
+                border-color: red;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .rechizite::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .submit {
+                width: 100%;
+                padding: 15px;
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+            }
+
+            .submit:hover {
+                background-color: black;
+                color: red;
+                transform: scale(1.05);
+            }
+
+            /* Media Query for responsiveness */
+            @media (max-width: 480px) {
+                .card-container {
+                    width: 90%;
+                    padding: 20px;
+                }
+
+                .logo-mazebank {
+                    width: 80px;
+                }
+
+                .submit {
+                    font-size: 16px;
+                    padding: 12px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="card-container">
+                <h1 class="titlu">MazeBank</h1>
+                <img class="logo-mazebank" src="https://pbs.twimg.com/profile_images/891404814818652160/bm4rOKWS_400x400.jpg" alt="MazeBank Logo">
+                <input class="rechizite" type="text" placeholder="PAN" aria-label="Personal Account Number">
+                <input class="rechizite" type="date" aria-label="Date">
+                <input class="rechizite" type="text" placeholder="Name" aria-label="Name">
+                <input class="submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>
+
+
